@@ -1,33 +1,36 @@
-import {StyleSheet, Text, View, SafeAreaView, useColorScheme} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import Flatlist from './src/components/Flatlist';
+import Naviagting from './src/components/Naviagting';
 
 function App() {
 
-  const isDarkMode = useColorScheme() === "dark"
+  // const isDarkMode = useColorScheme() === "dark"
 
   return (
-    <View style = {style.container}>
-      <Text style = {isDarkMode ? style.darkText : style.whiteText}>hello world !!!</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <Flatlist></Flatlist>
+        <Naviagting/>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const style = StyleSheet.create({
 
   container : 
-  {
-    flex :1,
-    justifyContent : "center",
-    alignItems : "center"
-  },
+  {},
 
   whiteText :
   {
-    color : "white",
+    color : "black",
+    fontSize : 16,
   },
 
   darkText :
   {
-    color : "dark",
+    color : "black",
+    
   }
 
 
