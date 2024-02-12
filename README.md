@@ -50,3 +50,29 @@ function naviagteToExternalLink(websiteLink : string) : void
 	Linking.openURL(websiteLink);
 }
 ```
+
+## providing a click functionality :
+
+by using **TouchableOpacity**
+
+ we don’t need to provide styling like a button it by default gives a clicking look by reducing the opacity.
+
+ and it will have the onPressed();
+
+```TypeScript
+export default function App()
+{
+	function goToExternalWebsite(websiteLink : string) : void
+	{
+			console.log("pressed");
+	}
+	return (
+      <TouchableOpacity 
+      onPressed = ()=>goToExternalWebsite(websiteLink)>
+         <View>
+            <Text>Read more</Text>
+         </View>
+      </TouchableOpacity>
+	);
+}
+```
