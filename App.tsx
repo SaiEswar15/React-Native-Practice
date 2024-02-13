@@ -1,6 +1,8 @@
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
 import Flatlist from './src/components/Flatlist';
 import Naviagting from './src/components/Naviagting';
+// import ImagesWithLink from './src/components/Images';
+import ImagesFromAssets from './src/components/ImagesFromAssets';
 
 function App() {
 
@@ -11,6 +13,9 @@ function App() {
       <ScrollView>
         <Flatlist></Flatlist>
         <Naviagting/>
+
+        {/* <ImagesWithLink></ImagesWithLink> */}
+        <ImagesFromAssets></ImagesFromAssets>
       </ScrollView>
     </SafeAreaView>
   );
