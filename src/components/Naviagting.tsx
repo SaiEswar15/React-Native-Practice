@@ -12,7 +12,7 @@ export default function Naviagting() {
         <TouchableOpacity
           onPress={() => {
             console.log("pressed");
-            navigate('www.google.com');
+            navigate("https://www.google.com/?&bih=663&biw=1366&hl=en");
           }}>
           <Text style={styles.readMoreButton}>Read more.</Text>
         </TouchableOpacity>
