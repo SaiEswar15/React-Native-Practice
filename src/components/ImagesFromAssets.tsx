@@ -42,10 +42,34 @@ export default function ImagesFromAssets(): JSX.Element {
 
   const [dice, setDice] = useState(diceTwo);
 
-  function rollFunction(str : string): string{
+  function rollFunction(str : string): void{
     console.log("rolling the dice")
-    setDice(dice === diceTwo ? diceOne : diceTwo);
-    return `rolling the dice, ${str}`;
+
+    const randomNumber = Math.floor(Math.random()*6) + 1;
+
+    switch (randomNumber) {
+      case 1:
+        setDice(diceOne)
+        break;
+      case 2 :
+        setDice(diceTwo)
+        break;
+      case 3 :
+        setDice(diceThree)
+        break;
+      case 4 :
+        setDice(diceFour)
+        break;
+      case 5 :
+        setDice(diceFive)
+        break;
+      case 6 :
+        setDice(diceSix)
+        break;
+      default:
+        setDice(diceOne)
+        break;
+    }
   }
 
   return (
